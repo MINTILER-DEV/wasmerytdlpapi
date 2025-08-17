@@ -3,16 +3,14 @@ name = "ytdlp-api"
 version = "0.1.0"
 
 [dependencies]
-python = ">=3.11"
-flask = ">=2.3"
-yt-dlp = "*"
-
-[fs]
-"/tmp" = "tmp"
+node = ">=20.0"
 
 [command]
 name = "serve"
-args = ["./entrypoint.sh"]
+args = ["npm", "start"]
+
+[fs]
+"/tmp" = "tmp"
 
 [http]
 routes = [
