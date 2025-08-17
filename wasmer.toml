@@ -1,0 +1,20 @@
+[package]
+name = "ytdlp-api"
+version = "0.1.0"
+
+[dependencies]
+python = ">=3.11"
+flask = ">=2.3"
+yt-dlp = "*"
+
+[fs]
+"/tmp" = "tmp"
+
+[command]
+name = "serve"
+args = ["./entrypoint.sh"]
+
+[http]
+routes = [
+  { path = "/", proxy = "serve" }
+]
